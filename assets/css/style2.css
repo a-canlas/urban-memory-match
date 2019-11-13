@@ -51,11 +51,24 @@ main {
 .card {
   height: 33%;
   width: 15%;
+  border: 1px solid white;
+}
+
+.back {
+  height: 100%;
   background-image: url('../images/lfz-card.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1px solid white;
+
+}
+
+.front {
+  height: 100%;
+  background-image: url('../images/js-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 aside > * {
