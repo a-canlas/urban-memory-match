@@ -8,51 +8,64 @@
 
 6.) The .container div in this example would be given a height and width of 100% of its parent, main.*/
 
+body {
+  margin: 0px;
+  background-color: lightblue;
+}
+
 header {
-  height: 20vh;
+  height: 15vh;
+
+  font-size: 1.5em;
   text-align: center;
-  border: 2px limegreen solid;
+
+}
+
+.outer-container {
+  height: 85vh;
+  display: flex;
+  background-color: lightgoldenrodyellow;
 }
 
 aside {
-  height: 80vh;
-  width: 30%;
-  display: inline-block;
-  text-align: center;
-  font-size: 2em;
-  border: 1px black solid;
-  vertical-align: top;
+  height: 100%;
+  width: 25%;
 }
 
 main {
-  height: 80vh;
-  width: 69%;
+  height: 100%;
+  width: 75%;
   background-color: pink;
-  display: inline-block;
 }
 
-.container {
+.playfield {
   height: 100%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  background-color: mintcream;
   justify-content: space-around;
   align-content: space-around;
 }
 
 .card {
-  height: 30%;
+  height: 33%;
   width: 15%;
-  background-color: black;
-  border: 1px solid chartreuse;
+  background-image: url('../images/lfz-card.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid white;
+}
+
+aside > * {
+  height: 12%;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 aside div {
-  border: 1px black solid;
+  border: 1px solid black;
+  border-radius: 4%;
   background-color: lightblue;
-  width: 80%;
-}
-
-aside p {
-  width: 80%;
 }
