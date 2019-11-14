@@ -11,14 +11,15 @@ var matches = null;
 var maxMatches = 2;
 
 function handleCardClick(event){
+  if($(event.currentTarget).find('.back').hasClass('hidden')){
+    return;
+  }
   if(!firstCardClicked){
     firstCardClicked = $(event.currentTarget);
     firstCardClicked.find('.back').addClass('hidden');
   } else {
     secondCardClicked = $(event.currentTarget);
     secondCardClicked.find('.back').addClass('hidden');
-  }
-  if(firstCardClicked && secondCardClicked){
     var cssValue1 = firstCardClicked.find('.front').css("background-image");
     var cssValue2 = secondCardClicked.find('.front').css("background-image");
     if(cssValue1 === cssValue2){
@@ -35,12 +36,14 @@ function handleCardClick(event){
 
       }, 1500);
     }
-    if(matches === maxMatches){
-      console.log('You Win!')
-      $('#winnerModal').removeClass('hidden');
-    }
-
   }
+
+  if(matches === maxMatches){
+    console.log('You Win!')
+    $('#winnerModal').removeClass('hidden');
+  }
+
+
 
 
 }
