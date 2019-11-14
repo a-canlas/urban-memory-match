@@ -2,11 +2,13 @@ $(document).ready(initializeApp);
 
 function initializeApp() {
   $('.card').on('click', handleCardClick);
+  $('#resetGameBtn').on('click', resetGame);
 }
 
 var firstCardClicked = null;
 var secondCardClicked = null;
 var matches = null;
+var maxMatches = 2;
 
 function handleCardClick(event){
   if(!firstCardClicked){
@@ -22,7 +24,6 @@ function handleCardClick(event){
     if(cssValue1 === cssValue2){
       console.log('cards match');
       matches ++;
-      console.log('Number of matches: ', matches);
       firstCardClicked = null;
       secondCardClicked = null;
     } else{
@@ -34,7 +35,20 @@ function handleCardClick(event){
 
       }, 1500);
     }
+    if(matches === maxMatches){
+      console.log('You Win!')
+      $('#winnerModal').removeClass('hidden');
+    }
 
   }
 
+
+}
+
+function resetGame() {
+  matches = null;
+  firstCardClicked = null;
+  secondCardClicked = null;
+  $('.card').find('.back').removeClass('hidden');
+  $('#winnerModal').addClass('hidden');
 }
