@@ -4,7 +4,6 @@ function initializeApp() {
   $('#resetGameBtn').on('click', resetGame);
   $('.playfield').on('click', ".card", handleCardClick);
   shuffleCards();
-  // $('.card').on('click', handleCardClick);
 
 }
 
@@ -89,19 +88,17 @@ function displayStats() { // this function updates the DOM with the current numb
 
 }
 
-function shuffleCards() {
-  debugger;
-  var imageClassList = ['js-logo', 'php-logo', 'css-logo', 'docker-logo', 'github-logo', 'html-logo', 'mysql-logo', 'node-logo', 'react-logo', 'js-logo', 'php-logo', 'css-logo', 'docker-logo', 'github-logo', 'html-logo', 'mysql-logo', 'node-logo', 'react-logo'];
+function shuffleCards() { // this function randomizes the cards in the playfield then dynamically adds them to the DOM
+  var imageClassList = ['js-logo', 'php-logo', 'css-logo', 'docker-logo', 'github-logo', 'html-logo', 'mysql-logo', 'node-logo', 'react-logo', 'js-logo', 'php-logo', 'css-logo', 'docker-logo', 'github-logo', 'html-logo', 'mysql-logo', 'node-logo', 'react-logo']; // contains a listing of all the image classes
   while(imageClassList.length > 0){
-    var cardDiv = $('<div>');
-    cardDiv.addClass('card');
-    var cardBack = $('<div>').addClass('back');
-    var cardFront = $('<div>').addClass('front');
-    var randomIndex = Math.floor(Math.random() * imageClassList.length);
-    var randomImageClass = imageClassList.splice(randomIndex, 1);
-    cardFront.addClass(randomImageClass);
-    cardDiv.append(cardBack, cardFront);
-    $('.playfield').append(cardDiv);
+    var cardDiv = $('<div>').addClass('card'); // Creates a div element with the class of card
+    var cardBack = $('<div>').addClass('back'); // Creates a div element with the class of back
+    var cardFront = $('<div>').addClass('front'); // Creates a div element with the class of front
+    var randomIndex = Math.floor(Math.random() * imageClassList.length); // Random array index number is created and saved to a variable
+    var randomImageClass = imageClassList.splice(randomIndex, 1); // Removes the referenced array index value and stores it in a variable
+    cardFront.addClass(randomImageClass); // The value above is passed in the addClass method
+    cardDiv.append(cardBack, cardFront); // Appends child divs to cardDiv
+    $('.playfield').append(cardDiv); // Appends child cardDiv to parent .playfield
 
   }
 }
