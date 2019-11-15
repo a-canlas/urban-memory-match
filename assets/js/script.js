@@ -1,8 +1,10 @@
 $(document).ready(initializeApp);
 
 function initializeApp() {
-  $('.card').on('click', handleCardClick);
   $('#resetGameBtn').on('click', resetGame);
+  $('.playfield').on('click', ".card", handleCardClick);
+  shuffleCards();
+  // $('.card').on('click', handleCardClick);
 
 }
 
@@ -63,8 +65,9 @@ function resetGame() { // this function will reset all values back to defaults
   attempts = 0;
   firstCardClicked = null;
   secondCardClicked = null;
-  $('.card').find('.back').removeClass('hidden');
   $('#winnerModal').addClass('hidden');
+  $('.playfield').empty();
+  shuffleCards();
   gamesPlayed++;
   displayStats();
 }
@@ -72,9 +75,9 @@ function resetGame() { // this function will reset all values back to defaults
 function calculateAccuracy(matches, totalAttempts) { // this function determines the average by dividing the total pairs matched with how many tries the player has made
   if(totalAttempts){ // Prevents divide by 0 error and NaN displaying in Accuracy result div
     var accuracy = matches / totalAttempts;
-    accuracy = (accuracy.toFixed(2)) * 100;
-    accuracy += '%';
-    return accuracy;
+    accuracy = (accuracy * 100).toFixed(0);
+    console.log("acc: ", accuracy)
+    return accuracy + '%';
   }
   return 0 + '%';
 }
@@ -84,5 +87,21 @@ function displayStats() { // this function updates the DOM with the current numb
   $('aside div:nth-child(5)').text(attempts);
   $('aside div:nth-child(7)').text(calculateAccuracy(matches, attempts));
 
+}
 
+function shuffleCards() {
+  debugger;
+  var imageClassList = ['js-logo', 'php-logo', 'css-logo', 'docker-logo', 'github-logo', 'html-logo', 'mysql-logo', 'node-logo', 'react-logo', 'js-logo', 'php-logo', 'css-logo', 'docker-logo', 'github-logo', 'html-logo', 'mysql-logo', 'node-logo', 'react-logo'];
+  while(imageClassList.length > 0){
+    var cardDiv = $('<div>');
+    cardDiv.addClass('card');
+    var cardBack = $('<div>').addClass('back');
+    var cardFront = $('<div>').addClass('front');
+    var randomIndex = Math.floor(Math.random() * imageClassList.length);
+    var randomImageClass = imageClassList.splice(randomIndex, 1);
+    cardFront.addClass(randomImageClass);
+    cardDiv.append(cardBack, cardFront);
+    $('.playfield').append(cardDiv);
+
+  }
 }
