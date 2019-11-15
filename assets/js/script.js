@@ -51,7 +51,6 @@ function handleCardClick(event){
   }
 
   if(matches === maxMatches){ // condition to determine when game is won
-    gamesPlayed++;
     console.log('You Win!')
     $('#winnerModal').removeClass('hidden');
     displayStats();
@@ -66,6 +65,7 @@ function resetGame() { // this function will reset all values back to defaults
   secondCardClicked = null;
   $('.card').find('.back').removeClass('hidden');
   $('#winnerModal').addClass('hidden');
+  gamesPlayed++;
   displayStats();
 }
 
