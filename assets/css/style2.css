@@ -1,0 +1,210 @@
+/* Notes for myself with using CSS
+1.) First decide on what are the main elements in the document
+2.) Figure out about how much of the page each element will take
+3.) Use vh for the height properties of the main elements
+4.) If there are two main elements meant to be next to each other, set the width by percentage (we use percentage because the width will always total to 100% - no one wants to scroll left to right when browsing)
+
+5.) When using display: flex, set all of the flex properties on the parent div that contains the cards . The flex properties would not be set on the cards
+
+6.) The .playfield grtxœ div in this example would be given a height and width of 100% of its parent, main.*/
+
+body {
+  margin: 0px;
+  background-color: mediumturquoise;
+  font-family: 'Knewave';
+
+}
+
+header {
+  height: 15vh;
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1 {
+  color:rgb(53, 101, 222);
+  text-shadow: 3px 3px black;
+
+}
+
+.outer-container {
+  height: 85vh;
+  display: flex;
+  background-color: rgb(33, 32, 33);
+}
+
+aside {
+  position: relative;
+  height: 100%;
+  width: 25%;
+}
+
+aside div {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  background-color: mediumturquoise;
+  border: 1px solid black;
+  border-radius: 4%;
+}
+
+aside > * {
+  height: 12%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+main {
+  height: 100%;
+  width: 75%;
+  background-color: pink;
+}
+
+aside p {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 3px mediumturquoise
+}
+
+.playfield {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(53, 101, 222);
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.card {
+  position: relative;
+  height: 33%;
+  width: 15%;
+  border: 1px solid gray;
+}
+
+.back, .front, .js-logo{
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.back {
+  position: absolute;
+  background-image: url('../images/cardback.JPG');
+}
+
+.js-logo {
+  background-image: url('../images/js-logo.png');
+}
+
+.php-logo {
+  background-image: url('../images/php-logo.jpeg');
+}
+
+.css-logo {
+  background-image: url('../images/css-logo.png');
+}
+
+.docker-logo {
+  background-image: url('../images/docker-logo.jpg');
+}
+
+.github-logo {
+  background-image: url('../images/gitHub-logo.png');
+}
+
+.html-logo {
+  background-image: url('../images/html-logo.png');
+}
+
+.mysql-logo {
+  background-image: url('../images/mysql-logo.jpg');
+}
+
+.node-logo {
+  background-image: url('../images/node-logo.png');
+}
+
+.react-logo {
+  background-image: url('../images/react-logo.png');
+}
+
+.tanuk-e {
+  background-image: url('../images/e.jpg');
+}
+
+.fox {
+  background-image: url('../images/fox.jpg');
+}
+
+.tea {
+  background-image: url('../images/tea.JPG');
+}
+
+.leaf {
+  background-image: url('../images/leaf.JPG');
+}
+
+.red {
+  background-image: url('../images/red.JPG');
+}
+
+.dawson {
+  background-image: url('../images/dawson.JPG');
+}
+
+.matcha {
+  background-image: url('../images/matcha.JPG');
+}
+
+.hat {
+  background-image: url('../images/hat.JPG');
+}
+
+.heart {
+  background-image: url('../images/heart.JPG');
+}
+
+.hidden {
+  display: none;
+}
+
+
+#winnerModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40vh;
+  width: 70vh;
+
+}
+
+.modalContent {
+  text-align: center;
+  height: 90%;
+  background-color: rgb(33, 32, 33);
+}
+
+
+#resetGameBtn {
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30%;
+  width: 80%;
+  background-color: mediumturquoise;
+  border-radius: 3%;
+}
+
+.modalContent p {
+  font-size: 2rem;
+  color: rgb(53, 101, 222);
+  text-shadow: 1px 1px white;
+}

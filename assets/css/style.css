@@ -1,1 +1,58 @@
+/*
+1.) First decide on what are the main elements in the document
+2.) Figure out about how much of the page each element will take
+3.) Use vh for the height properties of the main elements
+4.) If there are two main elements meant to be next to each other, set the width by percentage (we use percentage because the width will always total to 100% - no one wants to scroll left to right when browsing)
 
+5.) When using display: flex, set all of the flex properties on the parent div that contains the cards . The flex properties would not be set on the cards
+
+6.) The .container div in this example would be given a height and width of 100% of its parent, main.*/
+
+header {
+  height: 20vh;
+  text-align: center;
+  border: 2px limegreen solid;
+}
+
+aside {
+  height: 80vh;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  font-size: 2em;
+  border: 1px black solid;
+  vertical-align: top;
+}
+
+main {
+  height: 80vh;
+  width: 69%;
+  background-color: pink;
+  display: inline-block;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.card {
+  height: 30%;
+  width: 15%;
+  background-color: black;
+  border: 1px solid chartreuse;
+}
+
+aside div {
+  border: 1px black solid;
+  background-color: lightblue;
+  width: 80%;
+}
+
+aside p {
+  width: 80%;
+}
