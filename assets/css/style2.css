@@ -6,70 +6,77 @@
 
 5.) When using display: flex, set all of the flex properties on the parent div that contains the cards . The flex properties would not be set on the cards
 
-6.) The .playfield grtxœ div in this example would be given a height and width of 100% of its parent, main.*/
+6.) The .playfield div in this example would be given a height and width of 100% of its parent, main.*/
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0px;
-  background-color: mediumturquoise;
   font-family: 'Knewave';
+  height: 100vh;
+}
 
+body, #resetGameBtn {
+  background-color: mediumturquoise;
+}
+
+header, .modalContent {
+  text-align: center;
 }
 
 header {
-  height: 15vh;
-  text-align: center;
+  height: 20%;
+}
+
+.outer-container {
+  position: relative;
+  height: 80%;
+}
+
+/* header, .modalContent p {
   font-size: 2rem;
+} */
+
+h1 {
+  font-size: 30px;
+}
+
+.modalContent p {
+  font-size: 20px;
 }
 
 h1 {
-  color:rgb(53, 101, 222);
   text-shadow: 3px 3px black;
 
 }
 
-.outer-container {
-  height: 85vh;
-  display: flex;
-  background-color: rgb(33, 32, 33);
-}
-
-aside {
-  position: relative;
-  height: 100%;
-  width: 25%;
-}
-
-aside div {
-  position: relative;
-  width: 80%;
-  left: 10%;
-  background-color: mediumturquoise;
-  border: 1px solid black;
-  border-radius: 4%;
-}
-
-aside > * {
-  height: 12%;
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-main {
-  height: 100%;
-  width: 75%;
-  background-color: pink;
-}
-
-aside p {
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 2px 3px mediumturquoise
+h1, .modalContent p {
+  color: rgb(53, 101, 222);
 }
 
 .playfield {
-  height: 100%;
-  width: 100%;
   display: flex;
+}
+
+.outer-container, .modalContent {
+  background-color: rgb(33, 32, 33);
+}
+
+main, .playfield, .back, .front, .js-logo {
+  height: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+p {
+  margin: auto;
+}
+
+.playfield {
   flex-wrap: wrap;
   background-color: rgb(53, 101, 222);
   justify-content: space-around;
@@ -83,54 +90,22 @@ aside p {
   border: 1px solid gray;
 }
 
-.back, .front, .js-logo{
-  height: 100%;
+.back, .front {
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
 }
 
 .back {
   position: absolute;
   background-image: url('../images/cardback.JPG');
+  background-color: #000;
 }
 
-.js-logo {
-  background-image: url('../images/js-logo.png');
-}
-
-.php-logo {
-  background-image: url('../images/php-logo.jpeg');
-}
-
-.css-logo {
-  background-image: url('../images/css-logo.png');
-}
-
-.docker-logo {
-  background-image: url('../images/docker-logo.jpg');
-}
-
-.github-logo {
-  background-image: url('../images/gitHub-logo.png');
-}
-
-.html-logo {
-  background-image: url('../images/html-logo.png');
-}
-
-.mysql-logo {
-  background-image: url('../images/mysql-logo.jpg');
-}
-
-.node-logo {
-  background-image: url('../images/node-logo.png');
-}
-
-.react-logo {
-  background-image: url('../images/react-logo.png');
+.front {
+  background-color: #FFF;
 }
 
 .tanuk-e {
@@ -173,38 +148,85 @@ aside p {
   display: none;
 }
 
-
 #winnerModal {
+  border-radius: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 40vh;
-  width: 70vh;
-
+  height: 60%;
+  width: 30%;
 }
 
 .modalContent {
-  text-align: center;
-  height: 90%;
-  background-color: rgb(33, 32, 33);
+  background-color: antiquewhite;
 }
 
-
 #resetGameBtn {
-  position: absolute;
-  font-size: 1.5rem;
-  bottom: 10%;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
-  height: 30%;
-  width: 80%;
-  background-color: mediumturquoise;
-  border-radius: 3%;
+  border-radius: 10px;
+  width: 50%;
+  font-size: 20px;
 }
 
 .modalContent p {
-  font-size: 2rem;
-  color: rgb(53, 101, 222);
   text-shadow: 1px 1px white;
 }
+
+@media only screen and (orientation: portrait){
+  header {
+    height: 15%;
+  }
+
+  .outer-container {
+    height: 85%;
+  }
+
+  .card {
+    height: 15%;
+    width: 33%;
+  }
+}
+
+/*Scrapped Aside Styling*/
+/* aside {
+  width: 25%;
+} */
+
+/* aside div, #resetGameBtn {
+  width: 80%;
+} */
+
+/* aside div {
+  left: 10%;
+  border: 1px solid black;
+  border-radius: 4%;
+} */
+
+/* aside > *, #resetGameBtn {
+  font-size: 1.5rem;
+} */
+
+/* aside > * {
+  height: 12%;
+} */
+
+/* aside p {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 3px mediumturquoise
+} */
+
+/* aside, aside div, .card {
+  position: relative;
+} */
+
+/* header, aside > *, .modalContent {
+  text-align: center;
+} */
+
+/* body, aside div, #resetGameBtn {
+  background-color: mediumturquoise;
+} */
