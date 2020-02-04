@@ -8,18 +8,8 @@
   </head>
   <body>
     <header>
-      <h1>LFZ Memory Match</h1>
     </header>
     <div class="outer-container">
-      <aside>
-          <p>Stats</p>
-          <div>Games Played</div>
-          <div>0</div>
-          <div>Attempts</div>
-          <div>0</div>
-          <div>Accuracy</div>
-          <div>0%</div>
-        </aside>
         <main>
           <div class="playfield">
           </div>
@@ -28,6 +18,12 @@
           <div id="winnerModal" class="hidden">
             <div class="modalContent">
               <p>You Win!</p>
+              <div class="accuracy">
+                Accuracy: <span id="accuracyPercent">0</span>
+              </div>
+              <div class="drinksOrdered">
+                Drinks Ordered: <span id="drinks">0</span>
+              </div>
               <div id="resetGameBtn">Reset Game</div>
             </div>
           </div>
