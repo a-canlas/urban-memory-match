@@ -6,7 +6,7 @@
 
 5.) When using display: flex, set all of the flex properties on the parent div that contains the cards . The flex properties would not be set on the cards
 
-6.) The .container div in this example would be given a height and width of 100% of its parent, main.*/
+6.) The .playfield grtxœ div in this example would be given a height and width of 100% of its parent, main.*/
 
 body {
   margin: 0px;
@@ -49,6 +49,7 @@ main {
 }
 
 .card {
+  position: relative;
   height: 33%;
   width: 15%;
   border: 1px solid white;
@@ -64,13 +65,18 @@ main {
 }
 
 .back {
+  position: absolute;
   background-image: url('../images/lfz-card.jpg');
 }
 
 .js-logo {
   background-image: url('../images/js-logo.png');
-
 }
+
+.php-logo {
+  background-image: url('../images/php-logo.jpeg');
+}
+
 .hidden {
   display: none;
 }
