@@ -1,4 +1,4 @@
-/*
+/* Notes for myself with using CSS
 1.) First decide on what are the main elements in the document
 2.) Figure out about how much of the page each element will take
 3.) Use vh for the height properties of the main elements
@@ -6,53 +6,227 @@
 
 5.) When using display: flex, set all of the flex properties on the parent div that contains the cards . The flex properties would not be set on the cards
 
-6.) The .container div in this example would be given a height and width of 100% of its parent, main.*/
+6.) The .playfield div in this example would be given a height and width of 100% of its parent, main.*/
 
-header {
-  height: 20vh;
-  text-align: center;
-  border: 2px limegreen solid;
+* {
+  box-sizing: border-box;
 }
 
-aside {
-  height: 80vh;
-  width: 30%;
-  display: inline-block;
+body {
+  margin: 0px;
+  font-family: 'Knewave';
+  height: 100vh;
+}
+
+body, #resetGameBtn {
+  background-color: mediumturquoise;
+}
+
+header, .modalContent {
   text-align: center;
-  font-size: 2em;
-  border: 1px black solid;
-  vertical-align: top;
+}
+
+header {
+  height: 20%;
+}
+
+.outer-container {
+  position: relative;
+  height: 80%;
+}
+
+/* header, .modalContent p {
+  font-size: 2rem;
+} */
+
+h1 {
+  font-size: 30px;
+}
+
+.modalContent p {
+  font-size: 20px;
+}
+
+h1 {
+  text-shadow: 3px 3px black;
+
+}
+
+h1, .modalContent p {
+  color: rgb(53, 101, 222);
+}
+
+.playfield {
+  display: flex;
+}
+
+.outer-container, .modalContent {
+  background-color: rgb(33, 32, 33);
+}
+
+main, .playfield, .back, .front, .js-logo {
+  height: 100%;
 }
 
 main {
-  height: 80vh;
-  width: 69%;
-  background-color: pink;
-  display: inline-block;
+  width: 100%;
 }
 
-.container {
-  height: 100%;
-  width: 100%;
-  display: flex;
+p {
+  margin: auto;
+}
+
+.playfield {
   flex-wrap: wrap;
+  background-color: rgb(53, 101, 222);
   justify-content: space-around;
   align-content: space-around;
 }
 
 .card {
-  height: 30%;
+  position: relative;
+  height: 33%;
   width: 15%;
-  background-color: black;
-  border: 1px solid chartreuse;
+  border: 1px solid gray;
 }
 
-aside div {
-  border: 1px black solid;
-  background-color: lightblue;
-  width: 80%;
+.back, .front {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }
 
-aside p {
-  width: 80%;
+.back {
+  position: absolute;
+  background-image: url('../images/cardback.JPG');
+  background-color: #000;
 }
+
+.front {
+  background-color: #FFF;
+}
+
+.tanuk-e {
+  background-image: url('../images/e.jpg');
+}
+
+.fox {
+  background-image: url('../images/fox.jpg');
+}
+
+.tea {
+  background-image: url('../images/tea.JPG');
+}
+
+.leaf {
+  background-image: url('../images/leaf.JPG');
+}
+
+.red {
+  background-image: url('../images/red.JPG');
+}
+
+.dawson {
+  background-image: url('../images/dawson.JPG');
+}
+
+.matcha {
+  background-image: url('../images/matcha.JPG');
+}
+
+.hat {
+  background-image: url('../images/hat.JPG');
+}
+
+.heart {
+  background-image: url('../images/heart.JPG');
+}
+
+.hidden {
+  display: none;
+}
+
+#winnerModal {
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 30%;
+}
+
+.modalContent {
+  background-color: antiquewhite;
+}
+
+#resetGameBtn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  width: 50%;
+  font-size: 20px;
+}
+
+.modalContent p {
+  text-shadow: 1px 1px white;
+}
+
+@media only screen and (orientation: portrait){
+  header {
+    height: 15%;
+  }
+
+  .outer-container {
+    height: 85%;
+  }
+
+  .card {
+    height: 15%;
+    width: 33%;
+  }
+}
+
+/*Scrapped Aside Styling*/
+/* aside {
+  width: 25%;
+} */
+
+/* aside div, #resetGameBtn {
+  width: 80%;
+} */
+
+/* aside div {
+  left: 10%;
+  border: 1px solid black;
+  border-radius: 4%;
+} */
+
+/* aside > *, #resetGameBtn {
+  font-size: 1.5rem;
+} */
+
+/* aside > * {
+  height: 12%;
+} */
+
+/* aside p {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 3px mediumturquoise
+} */
+
+/* aside, aside div, .card {
+  position: relative;
+} */
+
+/* header, aside > *, .modalContent {
+  text-align: center;
+} */
+
+/* body, aside div, #resetGameBtn {
+  background-color: mediumturquoise;
+} */
