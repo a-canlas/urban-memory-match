@@ -89,7 +89,7 @@ function displayStats() { // this function updates the DOM with the current numb
 }
 
 function shuffleCards() { // this function randomizes the cards in the playfield then dynamically adds them to the DOM
-  var imageClassList = ['js-logo', 'php-logo', 'css-logo', 'docker-logo', 'github-logo', 'html-logo', 'mysql-logo', 'node-logo', 'react-logo', 'js-logo', 'php-logo', 'css-logo', 'docker-logo', 'github-logo', 'html-logo', 'mysql-logo', 'node-logo', 'react-logo']; // contains a listing of all the image classes
+  var imageClassList = ['tanuk-e', 'fox', 'tea', 'leaf', 'red', 'dawson', 'matcha', 'hat', 'heart', 'tanuk-e', 'fox', 'tea', 'leaf', 'red', 'dawson', 'matcha', 'hat', 'heart']; // contains a listing of all the image classes
   while(imageClassList.length > 0){
     var cardDiv = $('<div>').addClass('card'); // Creates a div element with the class of card
     var cardBack = $('<div>').addClass('back'); // Creates a div element with the class of back

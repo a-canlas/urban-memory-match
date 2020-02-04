@@ -1,4 +1,4 @@
-/*
+/* Notes for myself with using CSS
 1.) First decide on what are the main elements in the document
 2.) Figure out about how much of the page each element will take
 3.) Use vh for the height properties of the main elements
@@ -10,25 +10,48 @@
 
 body {
   margin: 0px;
-  background-color: lightblue;
+  background-color: mediumturquoise;
+  font-family: 'Knewave';
+
 }
 
 header {
   height: 15vh;
-  font-size: 1.5em;
   text-align: center;
+  font-size: 2rem;
+}
+
+h1 {
+  color:rgb(53, 101, 222);
+  text-shadow: 3px 3px black;
 
 }
 
 .outer-container {
   height: 85vh;
   display: flex;
-  background-color: lightgoldenrodyellow;
+  background-color: rgb(33, 32, 33);
 }
 
 aside {
+  position: relative;
   height: 100%;
   width: 25%;
+}
+
+aside div {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  background-color: mediumturquoise;
+  border: 1px solid black;
+  border-radius: 4%;
+}
+
+aside > * {
+  height: 12%;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 main {
@@ -37,12 +60,18 @@ main {
   background-color: pink;
 }
 
+aside p {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 3px mediumturquoise
+}
+
 .playfield {
   height: 100%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: mintcream;
+  background-color: rgb(53, 101, 222);
   justify-content: space-around;
   align-content: space-around;
 }
@@ -51,7 +80,7 @@ main {
   position: relative;
   height: 33%;
   width: 15%;
-  border: 1px solid white;
+  border: 1px solid gray;
 }
 
 .back, .front, .js-logo{
@@ -65,7 +94,7 @@ main {
 
 .back {
   position: absolute;
-  background-image: url('../images/lfz-card.jpg');
+  background-image: url('../images/cardback.JPG');
 }
 
 .js-logo {
@@ -104,20 +133,46 @@ main {
   background-image: url('../images/react-logo.png');
 }
 
+.tanuk-e {
+  background-image: url('../images/e.jpg');
+}
+
+.fox {
+  background-image: url('../images/fox.jpg');
+}
+
+.tea {
+  background-image: url('../images/tea.JPG');
+}
+
+.leaf {
+  background-image: url('../images/leaf.JPG');
+}
+
+.red {
+  background-image: url('../images/red.JPG');
+}
+
+.dawson {
+  background-image: url('../images/dawson.JPG');
+}
+
+.matcha {
+  background-image: url('../images/matcha.JPG');
+}
+
+.hat {
+  background-image: url('../images/hat.JPG');
+}
+
+.heart {
+  background-image: url('../images/heart.JPG');
+}
+
 .hidden {
   display: none;
 }
-aside > * {
-  height: 12%;
-  text-align: center;
-  font-size: 1.5rem;
-}
 
-aside div {
-  border: 1px solid black;
-  border-radius: 4%;
-  background-color: lightblue;
-}
 
 #winnerModal {
   position: absolute;
@@ -129,25 +184,27 @@ aside div {
 
 }
 
-
 .modalContent {
   text-align: center;
   height: 90%;
-  background-color: rgb(223, 223, 198);
+  background-color: rgb(33, 32, 33);
 }
-
-/* .modalContent * {
-  position: relative;
-} */
 
 
 #resetGameBtn {
   position: absolute;
+  font-size: 1.5rem;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   height: 30%;
   width: 80%;
-  background-color: rgb(100,255,0);
-  border-radius: 10%;
+  background-color: mediumturquoise;
+  border-radius: 3%;
+}
+
+.modalContent p {
+  font-size: 2rem;
+  color: rgb(53, 101, 222);
+  text-shadow: 1px 1px white;
 }
