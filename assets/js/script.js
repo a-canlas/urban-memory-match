@@ -78,10 +78,9 @@ function calculateAccuracy(matches, totalAttempts) { // this function determines
   return 0 + '%';
 }
 
-function displayStats() { // this function updates the DOM with the current number of games played, attempts to find a matching pair and the accuracy ratio of actual matches to attempts
-  $('aside div:nth-child(3)').text(gamesPlayed);
-  $('aside div:nth-child(5)').text(attempts);
-  $('aside div:nth-child(7)').text(calculateAccuracy(matches, attempts));
+function displayStats() {
+  $('#drinks').text(gamesPlayed);
+  $('#accuracyPercent').text(calculateAccuracy(matches, attempts));
 
 }
 
