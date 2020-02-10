@@ -21,14 +21,18 @@ Urban Memory Match can be found here: [https://urban.acanlas.dev](https://urban.
 ## Development
 #### System Requirements
 - Google Chrome or Mozilla Firefox browser
+
 All other requirements are already included with the application
 
 #### Getting Started
 1. Clone the repository
+
 ``` git clone https://github.com/a-canlas/urban-memory-match ```
 2. Navigate to folder where clone is located
+
 ``` cd urban-memory-match ```
 3. Launch index.html page
+
 ``` code . ```
 or open index.html in your web browser
 4. Enjoy! ^_^
