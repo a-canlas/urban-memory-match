@@ -28,7 +28,7 @@ All other requirements are already included with the application
 1. Clone the repository
 
 ```
-git clone https://github.com/a-canlas/urban-memory-match
+git clone https://github.com/a-canlas/urban-memory-match.git
 ```
 
 2. Navigate to folder where clone is located
