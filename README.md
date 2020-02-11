@@ -27,15 +27,21 @@ All other requirements are already included with the application
 #### Getting Started
 1. Clone the repository
 
-``` git clone https://github.com/a-canlas/urban-memory-match ```
+```
+git clone https://github.com/a-canlas/urban-memory-match
+```
 
 2. Navigate to folder where clone is located
 
-``` cd urban-memory-match ```
+```
+cd urban-memory-match
+```
 
 3. Launch index.html page
 
-``` code . ```
+```
+code .
+```
 or open index.html in your web browser
 
 4. Enjoy! ^_^
