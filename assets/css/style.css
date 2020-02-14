@@ -28,6 +28,8 @@ header, .modalContent {
 
 header {
   height: 20%;
+  background-image: url('../images/IMG_0697.jpg');
+  background-size: contain;
 }
 
 .outer-container {
@@ -35,6 +37,10 @@ header {
   height: 80%;
 }
 
+.avatar {
+  background-image: url('../images/guess.jpg');
+  background-size: contain;
+}
 /* header, .modalContent p {
   font-size: 2rem;
 } */
@@ -148,7 +154,12 @@ p {
   display: none;
 }
 
-#winnerModal {
+#intro-modal {
+  height: 100%;
+  position: relative;
+}
+
+#winnerModal, .intro-content {
   border-radius: 10px;
   position: absolute;
   top: 50%;
@@ -157,11 +168,11 @@ p {
   width: 30%;
 }
 
-.modalContent {
+.modalContent, .intro-content {
   background-color: antiquewhite;
 }
 
-#resetGameBtn {
+#resetGameBtn, #acknowledge-button {
   position: relative;
   left: 50%;
   transform: translateX(-50%);

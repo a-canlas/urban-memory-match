@@ -9,25 +9,32 @@
   </head>
   <body>
     <header>
+      <div class="avatar"></div>
     </header>
     <div class="outer-container">
         <main>
           <div class="playfield">
           </div>
         </main>
+    </div>
+    <div id="winnerModal" class="hidden">
+      <div class="modalContent">
+        <p>You Win!</p>
+        <div class="accuracy">
+          Accuracy: <span id="accuracyPercent">0</span>
+        </div>
+        <div class="drinksOrdered">
+          Drinks Ordered: <span id="drinks">0</span>
+        </div>
+        <div id="resetGameBtn">Reset Game</div>
       </div>
-          <div id="winnerModal" class="hidden">
-            <div class="modalContent">
-              <p>You Win!</p>
-              <div class="accuracy">
-                Accuracy: <span id="accuracyPercent">0</span>
-              </div>
-              <div class="drinksOrdered">
-                Drinks Ordered: <span id="drinks">0</span>
-              </div>
-              <div id="resetGameBtn">Reset Game</div>
-            </div>
-          </div>
+    </div>
+    <div id="intro-modal">
+      <div class="intro-content">
+        <p>Help our hero get to the tea shop for some drinks. Each matching pair of cards will get them closer to their goal</p>
+        <div id="acknowledge-button">Let's Go!</div>
+      </div>
+    </div>
 
   </body>
 </html>
