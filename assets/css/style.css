@@ -156,7 +156,9 @@ p {
 
 #intro-modal {
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 #winnerModal, .intro-content {
@@ -170,6 +172,17 @@ p {
 
 .modalContent, .intro-content {
   background-color: antiquewhite;
+}
+
+.intro-content {
+  padding: 25px;
+  border: solid 10px rgb(88, 92, 83)
+}
+#acknowledge-button {
+  background-color: rgb(155, 176, 125);
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 15px;
 }
 
 #resetGameBtn, #acknowledge-button {
