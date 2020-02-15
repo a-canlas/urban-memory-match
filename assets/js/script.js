@@ -1,6 +1,7 @@
 $(document).ready(initializeApp);
 
 function initializeApp() {
+  $('#intro-modal').on('click', hideIntroModal);
   $('#resetGameBtn').on('click', resetGame);
   $('.playfield').on('click', ".card", handleCardClick);
   shuffleCards();
@@ -97,4 +98,8 @@ function shuffleCards() { // this function randomizes the cards in the playfield
     $('.playfield').append(cardDiv); // Appends child cardDiv to parent .playfield
 
   }
+}
+
+function hideIntroModal(){
+  $('#intro-modal').addClass('hidden');
 }
