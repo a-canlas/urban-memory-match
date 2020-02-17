@@ -18,8 +18,8 @@ body {
   height: 100vh;
 }
 
-body, #resetGameBtn {
-  background-color: mediumturquoise;
+body, #resetGameBtn, #acknowledge-button {
+  background-color: rgb(155, 176, 125);
 }
 
 header, .modalContent {
@@ -84,7 +84,7 @@ p {
 
 .playfield {
   flex-wrap: wrap;
-  background-color: rgb(53, 101, 222);
+  background-color: rgb(150, 123, 82);
   justify-content: space-around;
   align-content: space-around;
 }
@@ -172,17 +172,8 @@ p {
 
 .modalContent, .intro-content {
   background-color: antiquewhite;
-}
-
-.intro-content {
   padding: 25px;
   border: solid 10px rgb(88, 92, 83)
-}
-#acknowledge-button {
-  background-color: rgb(155, 176, 125);
-  text-align: center;
-  margin-top: 10px;
-  padding: 0 15px;
 }
 
 #resetGameBtn, #acknowledge-button {
@@ -192,11 +183,16 @@ p {
   border-radius: 10px;
   width: 50%;
   font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 15px;
 }
 
 .modalContent p {
   text-shadow: 1px 1px white;
 }
+
+
 
 @media only screen and (orientation: portrait){
   header {
