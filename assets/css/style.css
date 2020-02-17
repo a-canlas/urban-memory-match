@@ -18,8 +18,8 @@ body {
   height: 100vh;
 }
 
-body, #resetGameBtn {
-  background-color: mediumturquoise;
+body, #resetGameBtn, #acknowledge-button {
+  background-color: rgb(155, 176, 125);
 }
 
 header, .modalContent {
@@ -84,7 +84,7 @@ p {
 
 .playfield {
   flex-wrap: wrap;
-  background-color: rgb(53, 101, 222);
+  background-color: rgb(150, 123, 82);
   justify-content: space-around;
   align-content: space-around;
 }
@@ -156,11 +156,12 @@ p {
 
 #intro-modal {
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 #winnerModal, .intro-content {
-  border-radius: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -169,7 +170,10 @@ p {
 }
 
 .modalContent, .intro-content {
+  border-radius: 10px;
   background-color: antiquewhite;
+  padding: 25px;
+  border: solid 10px rgb(88, 92, 83)
 }
 
 #resetGameBtn, #acknowledge-button {
@@ -179,11 +183,16 @@ p {
   border-radius: 10px;
   width: 50%;
   font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 0 15px;
 }
 
 .modalContent p {
   text-shadow: 1px 1px white;
 }
+
+
 
 @media only screen and (orientation: portrait){
   header {
