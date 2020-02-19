@@ -13,6 +13,8 @@
 }
 
 body {
+  background: url('../images/urbanbgd.jpeg') center fixed no-repeat;
+  background-size: cover;
   margin: 0px;
   font-family: 'Knewave';
   height: 100vh;
@@ -28,8 +30,7 @@ header, .modalContent {
 
 header {
   height: 20%;
-  background-image: url('../images/IMG_0697.jpg');
-  background-size: contain;
+  position: relative;
 }
 
 .outer-container {
@@ -38,8 +39,13 @@ header {
 }
 
 .avatar {
-  background-image: url('../images/guess.jpg');
+  background: url('../images/guess.jpg') no-repeat;
   background-size: contain;
+  height: 110px;
+  width: 110px;
+  position: absolute;
+  left: 0;
+  top: 100px;
 }
 /* header, .modalContent p {
   font-size: 2rem;
@@ -66,7 +72,7 @@ h1, .modalContent p {
   display: flex;
 }
 
-.outer-container, .modalContent {
+.modalContent {
   background-color: rgb(33, 32, 33);
 }
 
@@ -84,7 +90,6 @@ p {
 
 .playfield {
   flex-wrap: wrap;
-  background-color: rgb(150, 123, 82);
   justify-content: space-around;
   align-content: space-around;
 }
