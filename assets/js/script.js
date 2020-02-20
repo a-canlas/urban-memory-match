@@ -24,10 +24,12 @@ function handleCardClick(event){
 
   if(!firstCardClicked){ // if firstCardClicked is null, set a value to it
     firstCardClicked = $(event.currentTarget);
+    firstCardClicked.addClass('flipped');
     firstCardClicked.find('.back').addClass('hidden'); // reveals background-image on .front div by hiding the background-image on .back
   } else { // sets a truthy value to secondCardClicked
     canBeClicked = false // prevents more than two cards to be clicked
     secondCardClicked = $(event.currentTarget);
+    secondCardClicked.addClass('flipped');
     secondCardClicked.find('.back').addClass('hidden');
     attempts++; // increments attempts at finding matching cards
     let cssValue1 = firstCardClicked.find('.front').css("background-image");
@@ -40,6 +42,8 @@ function handleCardClick(event){
       canBeClicked = true; // allows cards that do not have class .hidden applied to .back to be clicked again
     } else{ // if background-image urls do not equal one another
       setTimeout(() => {
+        firstCardClicked.removeClass('flipped');
+        secondCardClicked.removeClass('flipped');
         firstCardClicked.find('.back').removeClass('hidden');
         secondCardClicked.find('.back').removeClass('hidden');
         displayStats();
