@@ -1,13 +1,3 @@
-/* Notes for myself with using CSS
-1.) First decide on what are the main elements in the document
-2.) Figure out about how much of the page each element will take
-3.) Use vh for the height properties of the main elements
-4.) If there are two main elements meant to be next to each other, set the width by percentage (we use percentage because the width will always total to 100% - no one wants to scroll left to right when browsing)
-
-5.) When using display: flex, set all of the flex properties on the parent div that contains the cards . The flex properties would not be set on the cards
-
-6.) The .playfield div in this example would be given a height and width of 100% of its parent, main.*/
-
 * {
   box-sizing: border-box;
 }
@@ -29,8 +19,8 @@ header, .modalContent {
 }
 
 header {
-  height: 20%;
   position: relative;
+  height: 20%;
 }
 
 .outer-container {
@@ -47,9 +37,6 @@ header {
   left: 0;
   top: 100px;
 }
-/* header, .modalContent p {
-  font-size: 2rem;
-} */
 
 h1 {
   font-size: 30px;
@@ -197,9 +184,16 @@ p {
   text-shadow: 1px 1px white;
 }
 
+/* Media Query */
 
+@media screen and (min-width: 310px){
+  body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }
 
-@media only screen and (orientation: portrait){
   header {
     height: 15%;
   }
@@ -214,43 +208,68 @@ p {
   }
 }
 
-/*Scrapped Aside Styling*/
-/* aside {
-  width: 25%;
-} */
+@media screen and (min-width: 405px){
+  header {
+    height: 20%;
+  }
 
-/* aside div, #resetGameBtn {
-  width: 80%;
-} */
+  .outer-container {
+    height: 80%;
+  }
+}
 
-/* aside div {
-  left: 10%;
-  border: 1px solid black;
-  border-radius: 4%;
-} */
+@media screen and (min-width: 535px){
+  header {
+    height: 25%;
+  }
 
-/* aside > *, #resetGameBtn {
-  font-size: 1.5rem;
-} */
+  .outer-container {
+    height: 75%;
+  }
+}
 
-/* aside > * {
-  height: 12%;
-} */
+@media screen and (min-width: 660px){
+  header {
+    height: 30%;
+  }
 
-/* aside p {
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 2px 3px mediumturquoise
-} */
+  .outer-container {
+    height: 70%;
+  }
+  .card {
+    height: 33%;
+    width: 15%;
+  }
 
-/* aside, aside div, .card {
-  position: relative;
-} */
+}
 
-/* header, aside > *, .modalContent {
-  text-align: center;
-} */
+@media screen and (min-width: 755px){
+  header {
+    height: 35%;
+  }
+  .outer-container {
+    height: 65%;
+  }
+}
 
-/* body, aside div, #resetGameBtn {
-  background-color: mediumturquoise;
-} */
+@media screen and (min-width: 875px){
+  body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  header {
+    height: 40%;
+  }
+  .outer-container {
+    height: 60%;
+  }
+}
+
+@media only screen and (orientation: portrait){
+  .card {
+    height: 15%;
+    width: 33%;
+  }
+}
