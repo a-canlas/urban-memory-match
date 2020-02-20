@@ -28,7 +28,7 @@ header {
   height: 80%;
 }
 
-.avatar {
+/* .avatar {
   background: url('../images/guess.jpg') no-repeat;
   background-size: contain;
   height: 110px;
@@ -36,7 +36,7 @@ header {
   position: absolute;
   left: 0;
   top: 100px;
-}
+} */
 
 h1 {
   font-size: 30px;
@@ -86,24 +86,34 @@ p {
   height: 33%;
   width: 15%;
   border: 1px solid gray;
+  transform-style: preserve-3d;
+  transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
 .back, .front {
+  position: absolute;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  backface-visibility: hidden;
+
 
 }
 
 .back {
-  position: absolute;
+  /* position: absolute; */
   background-image: url('../images/cardback.JPG');
   background-color: #000;
 }
 
 .front {
   background-color: #FFF;
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
 }
 
 .tanuk-e {
