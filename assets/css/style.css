@@ -60,10 +60,6 @@ h1, .modalContent p {
   display: flex;
 }
 
-.modalContent {
-  background-color: rgb(33, 32, 33);
-}
-
 main, .playfield, .back, .front, .js-logo {
   height: 100%;
 }
@@ -100,8 +96,6 @@ p {
   background-size: contain;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-
-
 }
 
 .back {
@@ -159,22 +153,19 @@ p {
   display: none;
 }
 
-#intro-modal {
+#intro-modal, #winnerModal {
   height: 100%;
   position: absolute;
   top: 0;
   width: 100%;
 }
 
-#winnerModal, .intro-content {
+.modalContent, .intro-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30%;
-}
-
-.modalContent, .intro-content {
   border-radius: 10px;
   background-color: antiquewhite;
   padding: 25px;
@@ -191,10 +182,6 @@ p {
   text-align: center;
   margin-top: 10px;
   padding: 0 15px;
-}
-
-.modalContent p {
-  text-shadow: 1px 1px white;
 }
 
 /* Media Queries for Browsers*/
@@ -220,7 +207,7 @@ p {
     width: 33%;
   }
 
-  .intro-content {
+  .intro-content, .modalContent {
     width: 50%;
   }
 }
@@ -264,7 +251,7 @@ p {
     height: 85%;
   }
 
-  .intro-content {
+  .intro-content, .modalContent {
     width: 90%;
   }
 }
@@ -282,7 +269,7 @@ p {
     font-size: 30px;
   }
 
-  .intro-content {
+  .intro-content, .modalContent {
     width: 60%;
   }
 }
