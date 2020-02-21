@@ -100,6 +100,7 @@ p {
 
 .back {
   /* position: absolute; */
+  border: solid 3px #fff;
   background-image: url('../images/cardback.JPG');
   background-color: #000;
 }
