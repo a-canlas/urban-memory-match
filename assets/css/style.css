@@ -219,6 +219,10 @@ p {
     height: 15%;
     width: 33%;
   }
+
+  .intro-content {
+    width: 50%;
+  }
 }
 
 @media (min-width: 660px){
@@ -259,6 +263,10 @@ p {
   .outer-container {
     height: 85%;
   }
+
+  .intro-content {
+    width: 90%;
+  }
 }
 
 @media (min-width: 700px) and (orientation: portrait){
@@ -268,5 +276,13 @@ p {
 
   .outer-container {
     height: 80%;
+  }
+
+  .intro-content, #acknowledge-button {
+    font-size: 30px;
+  }
+
+  .intro-content {
+    width: 60%;
   }
 }
