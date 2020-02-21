@@ -8,9 +8,10 @@ body {
   margin: 0px;
   font-family: 'Knewave';
   height: 100vh;
+  background-color: rgb(58, 58, 58);
 }
 
-body, #resetGameBtn, #acknowledge-button {
+#resetGameBtn, #acknowledge-button {
   background-color: rgb(155, 176, 125);
 }
 
