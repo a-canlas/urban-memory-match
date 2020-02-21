@@ -193,22 +193,22 @@ p {
   text-shadow: 1px 1px white;
 }
 
-/* Media Query */
+/* Media Queries for Browsers*/
 
 @media (min-width: 310px){
   body {
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0 0;
+    background-size: cover;
+    background-position: center;
   }
 
   header {
-    height: 15%;
+    height: 40%;
   }
 
   .outer-container {
-    height: 85%;
+    height: 60%;
   }
 
   .card {
@@ -217,34 +217,7 @@ p {
   }
 }
 
-@media (min-width: 405px){
-  header {
-    height: 20%;
-  }
-
-  .outer-container {
-    height: 80%;
-  }
-}
-
-@media (min-width: 535px){
-  header {
-    height: 25%;
-  }
-
-  .outer-container {
-    height: 75%;
-  }
-}
-
 @media (min-width: 660px){
-  header {
-    height: 30%;
-  }
-
-  .outer-container {
-    height: 70%;
-  }
   .card {
     height: 33%;
     width: 15%;
@@ -252,33 +225,44 @@ p {
 
 }
 
-@media (min-width: 755px){
-  header {
-    height: 35%;
-  }
-  .outer-container {
-    height: 65%;
-  }
-}
+/* Media Queries for Mobile Devices */
 
-@media (min-width: 875px){
+@media (min-width: 200px) and (orientation: portrait){
   body {
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: 0 0;
   }
-  header {
-    height: 40%;
-  }
-  .outer-container {
-    height: 60%;
-  }
-}
 
-@media (orientation: portrait){
+  header {
+    height: 20%;
+  }
+
+  .outer-container {
+    height: 80%;
+  }
+
   .card {
     height: 15%;
     width: 33%;
+  }
+}
+
+@media (min-width: 300px) and (orientation: portrait){
+  header {
+    height: 15%;
+  }
+
+  .outer-container {
+    height: 85%;
+  }
+}
+
+@media (min-width: 700px) and (orientation: portrait){
+  header {
+    height: 20%;
+  }
+
+  .outer-container {
+    height: 80%;
   }
 }
