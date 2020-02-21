@@ -89,6 +89,7 @@ p {
 }
 
 .back, .front {
+  border-radius: 15px;
   position: absolute;
   width: 100%;
   background-position: center;
@@ -100,6 +101,7 @@ p {
 
 .back {
   /* position: absolute; */
+  border: solid 3px #fff;
   background-image: url('../images/cardback.JPG');
   background-color: #000;
 }
