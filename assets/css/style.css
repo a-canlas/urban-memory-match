@@ -195,7 +195,7 @@ p {
 
 /* Media Query */
 
-@media screen and (min-width: 310px){
+@media (min-width: 310px){
   body {
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -217,7 +217,7 @@ p {
   }
 }
 
-@media screen and (min-width: 405px){
+@media (min-width: 405px){
   header {
     height: 20%;
   }
@@ -227,7 +227,7 @@ p {
   }
 }
 
-@media screen and (min-width: 535px){
+@media (min-width: 535px){
   header {
     height: 25%;
   }
@@ -237,7 +237,7 @@ p {
   }
 }
 
-@media screen and (min-width: 660px){
+@media (min-width: 660px){
   header {
     height: 30%;
   }
@@ -252,7 +252,7 @@ p {
 
 }
 
-@media screen and (min-width: 755px){
+@media (min-width: 755px){
   header {
     height: 35%;
   }
@@ -261,7 +261,7 @@ p {
   }
 }
 
-@media screen and (min-width: 875px){
+@media (min-width: 875px){
   body {
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -276,7 +276,7 @@ p {
   }
 }
 
-@media only screen and (orientation: portrait){
+@media (orientation: portrait){
   .card {
     height: 15%;
     width: 33%;

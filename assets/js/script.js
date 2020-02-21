@@ -13,7 +13,7 @@ let secondCardClicked = null; // will be used to hold the information on the sec
 let matches = null; // will increase for every pair of cards that are matched
 let maxMatches = 9; // 9 total pairs to be matched
 let attempts = 0; // the initial value for the number of guesses variable
-let gamesPlayed = 0;
+let gamesPlayed = 1;
 let canBeClicked = true;
 
 function handleCardClick(event){
