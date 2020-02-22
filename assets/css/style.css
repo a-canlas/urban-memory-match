@@ -15,7 +15,7 @@ body {
   background-color: rgb(155, 176, 125);
 }
 
-header, .modalContent {
+header, .modal-content {
   text-align: center;
 }
 
@@ -43,7 +43,7 @@ h1 {
   font-size: 30px;
 }
 
-.modalContent p {
+.modal-content p {
   font-size: 20px;
 }
 
@@ -52,7 +52,7 @@ h1 {
 
 }
 
-h1, .modalContent p {
+h1, .modal-content p {
   color: rgb(53, 101, 222);
 }
 
@@ -155,14 +155,14 @@ p {
   display: none;
 }
 
-#intro-modal, #winnerModal {
+#intro-modal, #winner-modal {
   height: 100%;
   position: absolute;
   top: 0;
   width: 100%;
 }
 
-.modalContent, .intro-content {
+.modal-content, .intro-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -209,7 +209,7 @@ p {
     width: 33%;
   }
 
-  .intro-content, .modalContent {
+  .intro-content, .modal-content {
     width: 50%;
   }
 }
@@ -253,7 +253,7 @@ p {
     height: 85%;
   }
 
-  .intro-content, .modalContent {
+  .intro-content, .modal-content {
     width: 90%;
   }
 }
@@ -271,7 +271,7 @@ p {
     font-size: 30px;
   }
 
-  .intro-content, .modalContent {
+  .intro-content, .modal-content {
     width: 60%;
   }
 }

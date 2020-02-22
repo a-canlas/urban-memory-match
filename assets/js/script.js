@@ -70,9 +70,10 @@ function resetGame() { // this function will reset all values back to defaults
   attempts = 0;
   firstCardClicked = null;
   secondCardClicked = null;
+  avatarPosition = 0;
   $('#winner-modal').addClass('hidden');
   $('.playfield').empty();
-  $('.avatar').css('left', 0);
+  $('.avatar').css('left', `${avatarPosition}%`);
   shuffleCards();
   gamesPlayed++;
   displayStats();
