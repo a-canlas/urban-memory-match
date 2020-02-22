@@ -15,6 +15,7 @@ let maxMatches = 9; // 9 total pairs to be matched
 let attempts = 0; // the initial value for the number of guesses variable
 let gamesPlayed = 1;
 let canBeClicked = true;
+let avatarPosition = 0;
 
 function handleCardClick(event){
   // The condition below prevents the same matching pairs or more than two cards to be clicked
@@ -36,6 +37,8 @@ function handleCardClick(event){
     let cssValue2 = secondCardClicked.find('.front').css("background-image");
     if(cssValue1 === cssValue2){ //checks if the background-image url are equal
       matches ++;
+      avatarPosition += 10;
+      $('.avatar').css('left', `${avatarPosition}%`);
       displayStats(); // function call to update side bar statistics
       firstCardClicked = null;
       secondCardClicked = null;
@@ -56,7 +59,7 @@ function handleCardClick(event){
   }
 
   if(matches === maxMatches){ // condition to determine when game is won
-    $('#winnerModal').removeClass('hidden');
+    $('#winner-modal').removeClass('hidden');
     displayStats();
   }
 
@@ -67,8 +70,10 @@ function resetGame() { // this function will reset all values back to defaults
   attempts = 0;
   firstCardClicked = null;
   secondCardClicked = null;
-  $('#winnerModal').addClass('hidden');
+  avatarPosition = 0;
+  $('#winner-modal').addClass('hidden');
   $('.playfield').empty();
+  $('.avatar').css('left', `${avatarPosition}%`);
   shuffleCards();
   gamesPlayed++;
   displayStats();
