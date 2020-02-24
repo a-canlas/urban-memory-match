@@ -117,6 +117,10 @@ p {
   transform: rotateY(180deg);
 }
 
+.back, #acknowledge-button, #resetGameBtn {
+  cursor: pointer;
+}
+
 .tea3 {
   background-image: url('../images/tea3.png');
 }
