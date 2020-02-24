@@ -33,7 +33,7 @@ header {
   background: url('../images/avatar.png') no-repeat;
   background-size: contain;
   height: 50%;
-  width: 25%;
+  width: 10%;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -102,8 +102,8 @@ p {
 .back {
   /* position: absolute; */
   border: solid 3px #fff;
-  background-image: url('../images/cardback.JPG');
-  background-color: #000;
+  background-image: url('../images/Logo.png');
+  background-color: rgb(92, 35, 29);
 }
 
 .front {
@@ -115,40 +115,40 @@ p {
   transform: rotateY(180deg);
 }
 
-.tanuk-e {
-  background-image: url('../images/e.jpg');
+.tea3 {
+  background-image: url('../images/tea3.png');
 }
 
-.fox {
-  background-image: url('../images/fox.jpg');
+.tea4 {
+  background-image: url('../images/tea4.png');
 }
 
-.tea {
-  background-image: url('../images/tea.JPG');
+.tea1 {
+  background-image: url('../images/tea1.png');
 }
 
-.leaf {
-  background-image: url('../images/leaf.JPG');
+.tea5 {
+  background-image: url('../images/tea5.png');
 }
 
-.red {
-  background-image: url('../images/red.JPG');
+.tea6 {
+  background-image: url('../images/tea6.png');
 }
 
-.dawson {
-  background-image: url('../images/dawson.JPG');
+.tea2 {
+  background-image: url('../images/tea2.png');
 }
 
-.matcha {
-  background-image: url('../images/matcha.JPG');
+.tea7 {
+  background-image: url('../images/tea7.png');
 }
 
-.hat {
-  background-image: url('../images/hat.JPG');
+.tea8 {
+  background-image: url('../images/tea8.png');
 }
 
-.heart {
-  background-image: url('../images/heart.JPG');
+.tea9 {
+  background-image: url('../images/tea9.png');
 }
 
 .hidden {
