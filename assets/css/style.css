@@ -37,6 +37,8 @@ header {
   position: absolute;
   left: 0;
   bottom: 0;
+  transition-duration: 3s;
+  transition-property: left;
 }
 
 h1 {
@@ -182,8 +184,27 @@ p {
   width: 50%;
   font-size: 20px;
   text-align: center;
-  margin-top: 10px;
   padding: 0 15px;
+}
+
+#resetGameBtn {
+  margin-top: 10px;
+}
+
+.intro-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.jamesm {
+  background: url('../images/jamesm.png') no-repeat;
+  background-size: contain;
+  height: 235px;
+  width: 30%;
+}
+
+.intro-content p {
+  width: 70%;
 }
 
 /* Media Queries for Browsers*/
