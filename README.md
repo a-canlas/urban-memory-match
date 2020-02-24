@@ -18,6 +18,9 @@ Urban Memory Match can be found here: [https://urban.acanlas.dev](https://urban.
 - User can reset game to play again when finished with game
 - User can keep track of how many games were played
 
+## Preview
+![Urban Memory Match](./urbandemo.gif)
+
 ## Development
 #### System Requirements
 - Google Chrome or Mozilla Firefox browser
