@@ -95,7 +95,7 @@ function displayStats() {
 }
 
 function shuffleCards() { // this function randomizes the cards in the playfield then dynamically adds them to the DOM
-  let imageClassList = ['tanuk-e', 'fox', 'tea', 'leaf', 'red', 'dawson', 'matcha', 'hat', 'heart', 'tanuk-e', 'fox', 'tea', 'leaf', 'red', 'dawson', 'matcha', 'hat', 'heart']; // contains a listing of all the image classes
+  let imageClassList = ['tea1', 'tea2', 'tea3', 'tea4', 'tea5', 'tea6', 'tea7', 'tea8', 'tea9', 'tea1', 'tea2', 'tea3', 'tea4', 'tea5', 'tea6', 'tea7', 'tea8', 'tea9']; // contains a listing of all the image classes
   while(imageClassList.length > 0){
     let cardDiv = $('<div>').addClass('card'); // Creates a div element with the class of card
     let cardBack = $('<div>').addClass('back'); // Creates a div element with the class of back
